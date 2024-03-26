@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 
 var direcao = Vector2()
+var bala = preload("res://Bala.tscn")
+
 
 func movimentacao():
 	if (Input.is_key_pressed(KEY_RIGHT)) or (Input.is_key_pressed(KEY_D)):
@@ -32,9 +34,13 @@ func movimentacao():
 		get_child(0).flip_h = false
 	else:
 		get_child(0).flip_h = true
-		
-	
-	
+
+
+	# Programando o tiro
+	if Input.is_action_just_pressed("atirar"):
+		var novaBala = bala.instance()
+		novaBala.position = self.position
+		self.get_parent().add_child(novaBala)
 	
 func _ready():
 	pass

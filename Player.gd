@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 var direcao = Vector2()
 var bala = preload("res://Bala.tscn")
-
+var life = 100
 
 func movimentacao():
 	if (Input.is_key_pressed(KEY_RIGHT)) or (Input.is_key_pressed(KEY_D)):
@@ -49,6 +49,8 @@ func _ready():
 func _process(delta):
 	
 	movimentacao()
+	if life<=0:
+		print("Bateu as botas!")
 	
 	
 	

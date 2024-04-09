@@ -14,6 +14,11 @@ config/name="JogoTop-Dabe"
 run/main_scene="res://Fase1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

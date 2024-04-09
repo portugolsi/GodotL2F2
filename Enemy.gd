@@ -9,4 +9,9 @@ func _ready():
 
 func _process(delta):
 	angle = get_angle_to(player.position)
-	move_and_collide(Vector2(1,0).rotated(angle))
+	
+	if position.distance_to(player.position)>75:
+		move_and_collide(Vector2(1,0).rotated(angle))
+	else:
+		player.life = player.life-10
+		queue_free()

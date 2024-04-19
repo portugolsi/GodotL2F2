@@ -9,4 +9,11 @@ func _ready():
 
 func _process(delta):
 	
-	move_and_collide(Vector2(1,0).rotated(rotation)*speed)
+	var collision_info = move_and_collide(Vector2(1,0).rotated(rotation)*speed)
+	
+	if collision_info:
+		if "Enemy" in collision_info.collider.name:
+				print("Colidi com um inimigo")	
+				collision_info.collider.set("life", 0)
+				queue_free()
+				

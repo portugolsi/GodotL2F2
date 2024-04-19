@@ -58,7 +58,7 @@ __meta__ = {
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 13
+frame = 10
 playing = true
 
 [node name="Enemy" parent="." instance=ExtResource( 31 )]

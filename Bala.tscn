@@ -17,7 +17,6 @@ animations = [ {
 radius = 20.0
 
 [node name="Bala" type="KinematicBody2D"]
-position = Vector2( 221, 174 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -27,6 +26,7 @@ __meta__ = {
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "atirando"
+frame = 1
 playing = true
 
 [node name="ColisorBala" type="CollisionShape2D" parent="."]
